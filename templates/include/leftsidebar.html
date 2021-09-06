@@ -1,0 +1,64 @@
+{% load static %}
+<div class="left-side-bar">
+    <div class="brand-logo">
+        <a href="{% url 'index' %}">
+            <!-- <img src="{% static 'vendors/images/deskapp-logo.svg' %}" alt="" class="dark-logo">
+            <img src="{% static 'vendors/images/deskapp-logo-white.svg' %}" alt="" class="light-logo"> -->
+            <img src="{% static 'vendors/images/logo-image.png' %}" alt="" >
+
+            <!-- <h1 class="light-logo">WEB SCRAPPING TOOL </h1> -->
+        </a>
+        <div class="close-sidebar" data-toggle="left-sidebar-close">
+            <i class="ion-close-round"></i>
+        </div>
+    </div>
+    <div class="menu-block customscroll">
+        <div class="sidebar-menu">
+            <ul id="accordion-menu">
+                <li>
+                    <a href="{% url 'index' %}" class="dropdown-toggle no-arrow">
+                        <span class="micon dw dw-house-1"></span><span class="mtext">Home</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{% url 'all_a_url' %}" class="dropdown-toggle no-arrow">
+                        <span class="micon dw dw-invoice"></span><span class="mtext">Get all url</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{% url 'all_img_links' %}" class="dropdown-toggle no-arrow">
+                        <span class="micon dw dw-list3"></span><span class="mtext">Get all image links</span>
+                    </a>
+                </li>   
+                <li>
+                    <a href="{% url 'get_heading_data' %}" class="dropdown-toggle no-arrow">
+                        <span class="micon dw dw-apartment"></span><span class="mtext">Get all Heading Data</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{% url 'get_paragraph_data' %}" class="dropdown-toggle no-arrow">
+                        <span class="micon dw dw-presentation-1"></span><span class="mtext">Get all Paragraph Data</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{% url 'get_table_data' %}" class="dropdown-toggle no-arrow">
+                        <span class="micon dw dw-library"></span><span class="mtext">Get all Table Data</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{% url 'get_list_data' %}" class="dropdown-toggle no-arrow">
+                        <span class="micon dw dw-list3"></span><span class="mtext">Get all List Data</span>
+                    </a>
+                </li>
+                <!-- <li>
+                    <a href="{% url 'website_download' %}" class="dropdown-toggle no-arrow">
+                        <span class="micon dw dw-house-1"></span><span class="mtext">Download Full website code</span>
+                    </a>
+                </li> -->
+               
+                
+            </ul>
+        </div>
+    </div>
+</div>

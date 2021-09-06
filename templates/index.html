@@ -1,0 +1,85 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- Basic Page Info -->
+		<meta charset="utf-8">
+		<title>WEB SCRAPPING TOOL</title>
+	
+		{% include  "include/cssLinks.html" %}
+		<!-- Global site tag (gtag.js' %}) - Google Analytics -->
+		
+	</head>
+	<body>
+		<div class="pre-loader">
+			<div class="pre-loader-box">
+				<div class="loader-logo"><img src="{% static 'vendors/images/logo-image.png' %}" alt="" style="width: 300px;"></div>
+				<div class='loader-progress' id="progress_div">
+					<div class='bar' id='bar1'></div>
+				</div>
+				<div class='percent' id='percent1'>100%</div>
+				<div class="loading-text">
+					Loading...
+				</div>
+			</div>
+		</div>
+	
+	<!-- Topheader  -->
+	{% include  "include/topheader.html" %}
+	<!-- Right side bar -->
+	{% include  "include/rightsidebar.html" %}
+	<!-- Left Side Bar -->
+	{% include  "include/leftsidebar.html" %}
+	
+	
+	<div class="mobile-menu-overlay"></div>
+
+	<div class="main-container">
+		<div class="pd-ltr-20">
+			<div class="card-box pd-20 height-100-p mb-30">
+				<div class="row align-items-center">
+					<div class="col-md-4">
+						<img src="{% static 'vendors/images/banner-img.png' %}" alt="">
+					</div>
+					<div class="col-md-8">
+						<h4 class="font-20 weight-500 mb-10 text-capitalize">
+							Welcome<div class="weight-600 font-30 text-blue">Get All Code Of Any Webpage </div>
+						</h4>	
+						<p class="font-18 max-width-600">In this website get all code of any website current page so enter or paste the link of any webapge after click search button get all code of webpage.</p>
+					</div>
+				</div>
+			</div>
+			<form method="POST" >
+				{% csrf_token %}
+			  <!-- <div class="Neon Neon-theme-dragdropbox">
+				<input style="z-index: 999; opacity: 0; width: 1000px; height: 200px; position: absolute; right: 0px; left: 0px; margin-right: auto; margin-left: auto; margin-top: auto;margin-bottom: auto;" name="files" id="filer_input2" multiple="multiple" type="file">
+				<div class="Neon-input-dragDrop"><div class="Neon-input-inner"><div class="Neon-input-icon"><i class="fa fa-file-image-o"></i></div><div class="Neon-input-text"><h3>Drag&amp;Drop files here</h3> <span style="display:inline-block; margin: 15px 0">or</span></div><a class="Neon-input-choose-btn blue">Browse Files</a></div></div>
+			  </div> -->
+			  <!-- <button type="submit" style="background-color: green; font-size: 30px; color: honeydew;text-align: center; border-radius: 10PX;width: 200px; margin-top: 20px;">CONVERT</button> -->
+			  <div>
+				<input name="url"  placeholder="Search Here" type="url" style="height: 49px; width: 600px; border-radius: 10px; font-size: 35px;" required>
+				<button type="submit" style="background-color: blue; font-size: 30px; color: honeydew;text-align: center; border-radius: 10PX;width: 200px; margin-top: 20px;">Search</button>
+			  </div>    
+			</form>
+			</div>
+		<!-- {% include  "include/footer.html" %} -->
+		{% if number %}
+		<div class="pd-ltr-20">
+			<div class="card-box pd-20 height-100-p mb-30">
+				<div class="row align-items-center">
+					
+					<div class="col-md-8">
+						<h4 class="font-20 weight-500 mb-10 text-capitalize">
+							Output of All web page code 
+						</h4>
+						<p class="font-18 max-width-600" style="max-width: 500px;">{{number}}</p>
+						<p class="font-18 max-width-600" style="max-width: 500px;">{{number}}</p>
+					</div>
+				</div>
+			</div>
+			{% endif %}
+	<!-- js -->
+{% include  "include/jslinks.html" %}
+	
+</body>
+</html>

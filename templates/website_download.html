@@ -1,0 +1,77 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Basic Page Info -->
+	<meta charset="utf-8">
+	<title>DeskApp - Bootstrap Admin Dashboard HTML Template</title>
+
+	{% include  "include/cssLinks.html" %}
+	<!-- Global site tag (gtag.js' %}) - Google Analytics -->
+	
+</head>
+<body>
+	<div class="pre-loader">
+		<div class="pre-loader-box">
+			<div class="loader-logo"><img src="{% static 'vendors/images/deskapp-logo.svg' %}" alt=""></div>
+			<div class='loader-progress' id="progress_div">
+				<div class='bar' id='bar1'></div>
+			</div>
+			<div class='percent' id='percent1'>0%</div>
+			<div class="loading-text">
+				Loading...
+			</div>
+		</div>
+	</div>
+	<!-- Topheader  -->
+	{% include  "include/topheader.html" %}
+	<!-- Right side bar -->
+	{% include  "include/rightsidebar.html" %}
+	<!-- Left Side Bar -->
+	{% include  "include/leftsidebar.html" %}
+	
+	
+	<div class="mobile-menu-overlay"></div>
+
+	<div class="main-container">
+		<div class="pd-ltr-20">
+			<div class="card-box pd-20 height-100-p mb-30">
+				<div class="row align-items-center">
+					<div class="col-md-4">
+						<img src="{% static 'vendors/images/banner-img.png' %}" alt="">
+					</div>
+					<div class="col-md-8">
+						<h4 class="font-20 weight-500 mb-10 text-capitalize">
+							Welcome back <div class="weight-600 font-30 text-blue">Download All website code in local system</div>
+						</h4>
+						<p class="font-18 max-width-600">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde hic non repellendus debitis iure, doloremque assumenda. Autem modi, corrupti, nobis ea iure fugiat, veniam non quaerat mollitia animi error corporis.</p>
+					</div>
+				</div>
+			</div>
+			<form method="POST" >
+				{% csrf_token %}
+			<div>
+				<input name="url"  placeholder="Search Here" type="text" style="height: 49px; width: 600px; border-radius: 10px; font-size: 35px;" required>
+				<button type="submit" style="background-color: blue; font-size: 30px; color: honeydew;text-align: center; border-radius: 10PX;width: 200px; margin-top: 20px;">Download </button>
+			  </div>    
+			</form>
+			</div>
+		<!-- {% include  "include/footer.html" %} -->
+		<div class="pd-ltr-20">
+			<div class="card-box pd-20 height-100-p mb-30">
+				<div class="row align-items-center">
+					
+					<div class="col-md-8">
+						<h4 class="font-20 weight-500 mb-10 text-capitalize">
+							Done Your Links all code download  
+						</h4>
+						<p class="font-18 max-width-600">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde hic non repellendus debitis iure, doloremque assumenda. Autem modi, corrupti, nobis ea iure fugiat, veniam non quaerat mollitia animi error corporis.</p>
+					</div>
+				</div>
+			</div>
+	
+	<!-- js -->
+{% include  "include/jslinks.html" %}
+	
+</body>
+</html>
